@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard-Sprint1</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1 id="title">Dashboard - Sprint 1</h1>
+      <p>Actuele energiestromen</p>
+    </header>
+
+    <main>
+      <div class="knoppen">
+        <button id="knop">vraag actuele energie data op</button>
+      </div>
+
+      <section id="dashboard">
+
+        <div class="kaart">
+          <h2>Productie</h2>
+          <p><span id="productie">--</span> W</p>
+        </div>
+
+        <div class="kaart">
+          <h2>Verbruik</h2>
+          <p><span id="verbruik">--</span> W</p>
+        </div>
+
+        <div class="kaart">
+          <h2>Naar huis</h2>
+          <p><span id="naarHuis">--</span> W</p>
+        </div>
+
+        <div class="kaart">
+          <h2>Naar batterij</h2>
+          <p><span id="naarBatterij">--</span> W</p>
+        </div>
+
+        <div class="kaart">
+          <h2>Naar net</h2>
+          <p><span id="naarNet">--</span> W</p>
+        </div>
+
+      </section>
+
+      <p id="tijdstip"></p>
+
+    </main>
+    
+    <footer>
+      <p>Energy Dashboard - 6TWE</p>
+      <p>Don Bosco Haacht</p>
+      <p>Sprint 1 energie dashboard © F Demonie</p>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

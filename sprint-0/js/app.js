@@ -1,11 +1,11 @@
 let knop=document.getElementById("knop");
 
-knop.addEventListener("click", haalDataOp );
+knop.addEventListener("click", haalActueleEnergieDataOp );
 
-async function haalDataOp() {
+async function haalActueleEnergieDataOp() {
 
   const antwoord = await fetch(
-        `${API_SERVER}/api/energie/dag/2026-08-07`,
+        `${API_SERVER}/api/energie/actueel`,
         {
             headers: {
                 "X-API-Key": API_KEY

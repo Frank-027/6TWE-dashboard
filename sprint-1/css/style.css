@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+}
+
+.knoppen {
+    text-align: center;
+    margin: 30px 0;
+}
+
+#knop {
+    background-color: #2563eb;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    padding: 12px 24px;
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: background-color 0.2s,
+                transform 0.2s;
+}
+
+#knop:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+#knop:active {
+    transform: translateY(0);
+}
+
+#dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.kaart {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    width: 180px;
+    text-align: center;
+}
+
+.kaart p {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+#tijdstip {
+    text-align: center;
+    margin-top: 30px;
+}
+
+footer {
+    margin-top: 50px;
+    padding: 20px;
+
+    background-color: #1f2937;
+    color: #d1d5db;
+
+    text-align: center;
+
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 4px 0;
+}
+
+footer strong {
+    color: white;
+}
