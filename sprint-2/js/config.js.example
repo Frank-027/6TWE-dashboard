@@ -1,0 +1,2 @@
+const API_KEY = "YOUR API-KEY";
+const API_SERVER = "http://<YOUR IP-ADDRESS>:5000";
