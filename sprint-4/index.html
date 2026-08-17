@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard-Sprint4</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1 id="title">Dashboard - Sprint 4</h1>
+      <p>Batterij gegevens per dag & per periode in grafiek</p>
+    </header>
+
+    <main>
+      <section>
+
+        <h2>Batterij: Actuele gegevens</h2>
+
+        <div id="dashboard">
+
+          <div class="kaart">
+            <h3>Laadniveau</h3>
+            <p><span id="soc">--</span> %</p>
+          </div>
+
+          <div class="kaart">
+            <h3>Beschikbare capaciteit</h3>
+            <p><span id="capaciteit">--</span> kWh</p>
+          </div>
+
+          <div class="kaart">
+            <h3>Status</h3>
+            <p id="batterijStatus">--</p>
+          </div>
+
+          <div class="kaart">
+            <h3>Vermogen</h3>
+            <p><span id="batterijVermogen">--</span> W</p>
+          </div>
+        </div>  
+
+      </section>
+
+      <section class="datum-selectie">
+        <div>
+          <label for="startDatum">Van:</label>
+          <input type="date" id="startDatum">
+        </div>
+
+        <div>
+          <label for="eindDatum">Tot:</label>
+          <input type="date" id="eindDatum">
+        </div>
+
+        <button id="knop">Toon batterij</button>
+      </section>
+
+      <p id="melding"></p>
+
+      <section class="grafiek-container">
+
+        <div class="grafiek">
+          <h2>Batterij laden / ontladen per dag</h2>
+          <canvas id="batterijEnergieGrafiek"></canvas>
+        </div>
+
+        <div class="grafiek">
+          <h2>Batterij SOC per dag</h2>
+          <canvas id="batterijSOCGrafiek"></canvas>
+        </div>
+        
+      </section>
+
+    </main>
+    
+    <footer>
+      <p>Energy Dashboard - 6TWE</p>
+      <p>Don Bosco Haacht</p>
+      <p>Sprint 4 energie dashboard © F Demonie</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="js/config.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
