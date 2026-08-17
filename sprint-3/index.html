@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard-Sprint3</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1 id="title">Dashboard - Sprint 3</h1>
+      <p>Energiestromen per dag in grafiek</p>
+    </header>
+
+    <main>
+      <section class="datum-selectie">
+        <div>
+          <label for="startDatum">Van:</label>
+          <input type="date" id="startDatum">
+        </div>
+
+        <div>
+          <label for="eindDatum">Tot:</label>
+          <input type="date" id="eindDatum">
+        </div>
+
+        <button id="knop">Toon energie</button>
+      </section>
+
+      <p id="melding"></p>
+
+      <section class="grafiek-container">
+
+        <h2>Energie per dag</h2>
+
+        <canvas id="energieGrafiek"></canvas>
+
+      </section>
+
+    </main>
+    
+    <footer>
+      <p>Energy Dashboard - 6TWE</p>
+      <p>Don Bosco Haacht</p>
+      <p>Sprint 3 energie dashboard © F Demonie</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="js/config.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
