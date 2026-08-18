@@ -154,3 +154,27 @@ document
 
 laadActueleEnergie();
 laadActueleBatterij();
+
+// ==========================================================
+// PAGINA INITIALISEREN
+// ==========================================================
+
+laadActueleEnergie();
+laadActueleBatterij();
+
+
+// ==========================================================
+// ACTUELE GEGEVENS AUTOMATISCH VERNIEUWEN
+// ==========================================================
+
+const VERNIEUW_INTERVAL = 60_000;
+
+setInterval(
+    () => {
+
+        laadActueleEnergie();
+        laadActueleBatterij();
+
+    },
+    VERNIEUW_INTERVAL
+);
