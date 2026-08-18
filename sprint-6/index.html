@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Energy Dashboard - Sprint 5</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Energy Dashboard</h1>
+        <p>Sprint 5 — geïntegreerd energiedashboard</p>
+    </header>
+
+    <main>
+
+        <!-- ==================================================
+             ACTUELE ENERGIE
+        =================================================== -->
+
+        <section>
+
+            <h2>Actuele energie</h2>
+
+            <p id="meldingActueelEnergie" class="melding"></p>
+
+            <div class="dashboard">
+
+                <div class="kaart">
+                    <h3>Productie</h3>
+                    <p><span id="productieActueel">--</span> W</p>
+                </div>
+
+                <div class="kaart">
+                    <h3>Verbruik</h3>
+                    <p><span id="verbruikActueel">--</span> W</p>
+                </div>
+
+                <div class="kaart">
+                    <h3>Naar net</h3>
+                    <p><span id="naarNetActueel">--</span> W</p>
+                </div>
+
+                <div class="kaart">
+                    <h3>Afname net</h3>
+                    <p><span id="afnameActueel">--</span> W</p>
+                </div>
+
+            </div>
+
+            <p id="tijdstipEnergie"></p>
+
+        </section>
+
+
+        <!-- ==================================================
+             ACTUELE BATTERIJ
+        =================================================== -->
+
+        <section>
+
+            <h2>Actuele batterij</h2>
+
+            <p id="meldingActueelBatterij" class="melding"></p>
+
+            <div class="dashboard">
+
+                <div class="kaart">
+                    <h3>SOC</h3>
+                    <p><span id="soc">--</span> %</p>
+                </div>
+
+                <div class="kaart">
+                    <h3>Capaciteit</h3>
+                    <p><span id="capaciteit">--</span> kWh</p>
+                </div>
+
+                <div class="kaart">
+                    <h3>Status</h3>
+                    <p id="batterijStatus">--</p>
+                </div>
+
+                <div class="kaart">
+                    <h3>Vermogen</h3>
+                    <p><span id="batterijVermogen">--</span> W</p>
+                </div>
+
+            </div>
+
+            <p id="tijdstipBatterij"></p>
+
+        </section>
+
+
+        <!-- ==================================================
+             DAGGEGEVENS
+        =================================================== -->
+
+        <section>
+
+            <h2>Energie van één dag</h2>
+
+            <div class="datum-selectie">
+
+                <label for="datum">Datum:</label>
+                <input type="date" id="datum">
+
+                <button id="knopDag">
+                    Toon daggegevens
+                </button>
+
+            </div>
+
+            <p id="meldingDagEnergie" class="melding"></p>
+
+            <div class="dashboard">
+
+                <div class="kaart">
+                    <h3>Productie</h3>
+                    <p><span id="productieDag">--</span> kWh</p>
+                </div>
+
+                <div class="kaart">
+                    <h3>Verbruik</h3>
+                    <p><span id="verbruikDag">--</span> kWh</p>
+                </div>
+
+                <div class="kaart">
+                    <h3>Zelfconsumptie</h3>
+                    <p><span id="zelfconsumptieDag">--</span> kWh</p>
+                </div>
+
+                <div class="kaart">
+                    <h3>Injectie</h3>
+                    <p><span id="injectieDag">--</span> kWh</p>
+                </div>
+
+                <div class="kaart">
+                    <h3>Afname</h3>
+                    <p><span id="afnameDag">--</span> kWh</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             HISTORIEK
+        =================================================== -->
+
+        <section>
+
+            <h2>Historische gegevens</h2>
+            
+            <p id="meldingPeriodeDatum" class="melding"></p>
+
+            <div class="datum-selectie">
+
+                <div>
+                    <label for="startDatum">Van:</label>
+                    <input type="date" id="startDatum">
+                </div>
+
+                <div>
+                    <label for="eindDatum">Tot:</label>
+                    <input type="date" id="eindDatum">
+                </div>
+
+                <button id="knopPeriode">
+                    Toon periode
+                </button>
+
+            </div>
+
+            
+
+            <div class="grafiek-container">
+
+                <div class="grafiek">
+                    <h3>Energie per dag</h3>
+                    <p id="meldingPeriodeEnergie" class="melding"></p>
+                    <canvas id="energieGrafiek"></canvas>
+                </div>
+
+                <div class="grafiek">
+                    <h3>Batterij laden / ontladen</h3>
+                    <p id="meldingPeriodeBatterij" class="melding"></p>
+                    <canvas id="batterijGrafiek"></canvas>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p><strong>Energy Dashboard — 6TWE</strong></p>
+        <p>Don Bosco Haacht</p>
+        <p>Sprint 5 © F. Demonie</p>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/energie.js"></script>
+    <script src="js/batterij.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>
